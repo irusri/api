@@ -1,0 +1,11 @@
+.vscode
+experiment/src/*
+network/src/*
+genelist/src/*
+translation/src/*
+experiment/vendor/*
+network/vendor/*
+genelist/vendor/*
+translation/vendor/*
+
+
