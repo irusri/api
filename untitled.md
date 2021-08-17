@@ -102,7 +102,7 @@ Whether the cake should be gluten-free or not.
 
 ###  Get all databases <a id="get-all-databases"></a>
 
-https://api.plantgenie.org/dbThis endpoint allows you to get all PlantGenIE databases .RequestResponsePath ParametersdbREQUIREDstringdb to represent databases
+https://api.plantgenie.org/dbThis endpoint allows you to get all PlantGenIE databases .RequestResponsePath ParametersdbREQUIREDstringdb to represent databases 
 
 ### GETGet one database/species/abbreviation <a id="get-one-database-species-abbreviation"></a>
 
