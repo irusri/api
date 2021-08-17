@@ -6,7 +6,7 @@ Get experiments
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to get all the experiments belongs to given database.
+This endpoint allows you to get all the experiments are in the given database.
 {% endapi-method-description %}
 
 {% api-method-spec %}
