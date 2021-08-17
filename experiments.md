@@ -1,4 +1,4 @@
-# Experiments
+# Experiment
 
 {% api-method method="get" host="https://api.plantgenie.org" path="/experiment/get\_all" %}
 {% api-method-summary %}
