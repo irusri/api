@@ -2,6 +2,6 @@
 
 * [API for PlantGenIE](README.md)
 * [Databases](databases.md)
-* [Untitled](untitled.md)
+* [GeneList](untitled.md)
 * [Experiments](experiments.md)
 
