@@ -12,9 +12,7 @@ Cookie baed User ID is domain dependent which means we can not expect the same u
 
 #### Database Name:
 
-We have to pass the database name 
-
-{% embed url="https://api.plantgenie.org" %}
+We have to pass the database name to access specific species or database details. Once user selected the database it can be stored as a cookie or temporary parameter to avoid unnecessary user request  to the server. The following end point list all the available 
 
 
 
