@@ -16,5 +16,5 @@ We have to pass the database name to access specific species or database details
 
 #### **API in action:**
 
-We will be using [codepen.io](https://codepen.io/) and [observablehq.com](https://observablehq.com/) for practical demonstration of the API endpoints.
+We will be using [codepen.io](https://codepen.io/) and [observablehq.com](https://observablehq.com/) for practical demonstration of API endpoints.
 
