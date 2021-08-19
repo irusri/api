@@ -1,4 +1,4 @@
-# GeneList
+# Untitled
 
 {% api-method method="get" host="https://api.cakes.com" path="/v1/cakes/:id" %}
 {% api-method-summary %}
@@ -100,5 +100,12 @@ Whether the cake should be gluten-free or not.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-###  [ ](https://app.gitbook.com/@geniesys/s/plantgenie-api/~/drafts/-MhJ3IOLlVYWvaAQI_Ue/experiment) <a id="get-all-databases"></a>
+###  Get all databases <a id="get-all-databases"></a>
+
+https://api.plantgenie.org/dbThis endpoint allows you to get all PlantGenIE databases .RequestResponsePath ParametersdbREQUIREDstringdb to represent databases 
+
+### GETGet one database/species/abbreviation <a id="get-one-database-species-abbreviation"></a>
+
+https://api.plantgenie.org/db/nameThis endpoint allows you to get corresponding database/species/abbreviation.RequestResponsePath ParametersdbREQUIREDstringdb to represent databasesQuery ParametersnameOPTIONALstringName can be database name or the species abbreviation[  
+](https://app.gitbook.com/@geniesys/s/plantgenie-api/~/drafts/-MhJ3IOLlVYWvaAQI_Ue/experiment)
 
