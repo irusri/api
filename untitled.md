@@ -1,111 +1,69 @@
-# Untitled
+# GeneList
 
-{% api-method method="get" host="https://api.cakes.com" path="/v1/cakes/:id" %}
-{% api-method-summary %}
+```text
+HTML CSS JSResult Skip Results Iframe
+EDIT ON
+// Debug parameters
+GenIE_userID =document.getElementById("user_id").innerText;
+GenIE_selectedspeciesAbbreviation= document.getElementById("abbreviation").innerText;
+GenIE_genelistDatabase="plantgenie_genelist";
 
-{% endapi-method-summary %}
+// Initialize GenIE object
+GenIE =({
+  allGenelists: {},
+  activeGenelist: {},
+  allExperiments: {},
+  activeExperiment: {},
+  allDatabases: {},
+  userID: GenIE_userID,
+  selectedspeciesAbbreviation: GenIE_selectedspeciesAbbreviation,
+  genelistDatabase: GenIE_genelistDatabase,
+  databaseURL : "https://api.plantgenie.org/db",
+  genelistURL : "https://api.plantgenie.org/genelist/get_active_list",
+  experimentURL : "https://api.plantgenie.org/experiment",
+  expressionURL : "https://api.plantgenie.org/experiment/expression",
+  networkURL : "https://api.plantgenie.org/network"
+});
 
-{% api-method-description %}
-This endpoint allows you to get free cakes.
-{% endapi-method-description %}
+// Common promise request
+const plantgenieRequest = (url) => {  
+     return new Promise((resolve, reject) => {
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', url, true);
+        xhr.send();
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState !== 4) {
+                return;
+            }
+            if (xhr.status === 200) {
+                resolve(JSON.parse(xhr.responseText));
+            } else {
+                const error = xhr.statusText || 'Something went wrong!';
+                reject(error);
+            }
+        };
+    });
+}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="id" type="string" %}
-ID of the cake to get, for free of course.
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-
-{% api-method-headers %}
-{% api-method-parameter name="Authentication" type="string" required=true %}
-Authentication token to track down who is emptying our stocks.
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-
-{% api-method-query-parameters %}
-{% api-method-parameter name="recipe" type="string" %}
-The API will do its best to find a cake matching the provided recipe.
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="gluten" type="boolean" %}
-Whether the cake should be gluten-free or not.
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Cake successfully retrieved.
-{% endapi-method-response-example-description %}
-
-```
-{    "name": "Cake's name",    "recipe": "Cake's recipe name",    "cake": "Binary cake"}
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=404 %}
-{% api-method-response-example-description %}
-Could not find a cake matching this query.
-{% endapi-method-response-example-description %}
-
-```
-{    "message": "Ain't no cake like that."}
-```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
-{% api-method method="get" host="https://api.plantgenie.org" path="/db" %}
-{% api-method-summary %}
-Get Databases
-{% endapi-method-summary %}
-
-{% api-method-description %}
-This endpoint allows you to get free cakes. 
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="db" type="string" %}
-**db** to get all the databases.
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-
-{% api-method-query-parameters %}
-{% api-method-parameter name="recipe" type="string" %}
-
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="gluten" type="boolean" %}
-Whether the cake should be gluten-free or not.
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
+//onload function
+onLoad= async () => {
+  let database_name = await plantgenieRequest(GenIE.databaseURL + "/" + GenIE.selectedspeciesAbbreviation);
+  if (database_name) {
+    GenIE.selectedspeciesDatabase = database_name[0].db;
+  }
+  let genelist = null;
+    genelist = await plantgenieRequest(GenIE.genelistURL + "?name=" + GenIE.genelistDatabase + "&fingerprint=" + GenIE.userID + "&table=" + GenIE.selectedspeciesDatabase)
+  if (genelist) {
+    GenIE.activeGenelist = genelist;
+  }
+  let experiments = null;
+  experiments = await plantgenieRequest(GenIE.experimentURL + "/get_all?name=" + GenIE.selectedspeciesDatabase);
+  if(experiments){
+    GenIE.allExperiments = experiments;
+  }
+  console.log(GenIE)
+};
+onLoad();
 
 ```
-
-```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
-###  Get all databases <a id="get-all-databases"></a>
-
-https://api.plantgenie.org/dbThis endpoint allows you to get all PlantGenIE databases .RequestResponsePath ParametersdbREQUIREDstringdb to represent databases 
-
-### GETGet one database/species/abbreviation <a id="get-one-database-species-abbreviation"></a>
-
-https://api.plantgenie.org/db/nameThis endpoint allows you to get corresponding database/species/abbreviation.RequestResponsePath ParametersdbREQUIREDstringdb to represent databasesQuery ParametersnameOPTIONALstringName can be database name or the species abbreviation[  
-](https://app.gitbook.com/@geniesys/s/plantgenie-api/~/drafts/-MhJ3IOLlVYWvaAQI_Ue/experiment)
 
