@@ -12,7 +12,7 @@ Cookie baed User ID is domain dependent which means we can not expect the same u
 
 #### Database Name:
 
-We have to pass the database name to access specific species or database details. Once user selected the database it can be stored as a cookie or temporary parameter to avoid unnecessary user request  to the server.  [Database](https://app.gitbook.com/@geniesys/s/plantgenie-api/databases) page listed all the available databases. 
+We have to pass the database name to access specific species or database details. Once user selected the database it can be stored as a cookie or temporary parameter to avoid unnecessary user request  to the server.  [Databases](https://app.gitbook.com/@geniesys/s/plantgenie-api/databases) page listed all the available databases. 
 
 #### **API in action:**
 
