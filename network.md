@@ -52,5 +52,9 @@ An empty array
 {% endapi-method-spec %}
 {% endapi-method %}
 
+Here you can see the above API endpoint in action.
+
+{% embed url="https://observablehq.com/@irusri/plantgenie-experiments" %}
+
 
 
