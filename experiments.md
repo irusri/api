@@ -6,7 +6,7 @@ Get experiments
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to get all the experiments are in the given database.
+This endpoint allows you to get all the experiments for the given database.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -41,7 +41,7 @@ Get all the experiments by given database
 
 {% api-method-response-example httpCode=302 %}
 {% api-method-response-example-description %}
-Empty array
+An empty array
 {% endapi-method-response-example-description %}
 
 ```
