@@ -1,7 +1,4 @@
 # GeneList
-
-
-
 {% api-method method="get" host="" path="" %}
 {% api-method-summary %}
 
