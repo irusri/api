@@ -2,7 +2,7 @@
 ***********
 {% api-method method="get" host="https://api.plantgenie.org/genelist" path="/get_all" %}
 {% api-method-summary %}
-Get all databases 
+Get all genelists 
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -14,8 +14,13 @@ This endpoint allows you to get all PlantGenIE databases.
 {% api-method-path-parameters %}
 
 {% api-method-parameter name="name" type="string" required=true %}
-db to represent databases
+database name to represent databases
 {% endapi-method-parameter %}
+
+{% api-method-parameter name="table" type="string" required=true %}
+database name to represent databases
+{% endapi-method-parameter %}
+
 
 {% endapi-method-path-parameters %}
 {% endapi-method-request %}
