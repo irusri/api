@@ -1,5 +1,7 @@
 # Databases
 
+
+
 {% api-method method="get" host="https://api.plantgenie.org" path="/db" %}
 {% api-method-summary %}
 Get all databases

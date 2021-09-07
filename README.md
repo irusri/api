@@ -1,6 +1,6 @@
 # API for PlantGenIE
 
-Here we will discuss main API end points that we used in PlantGenIE. There are some important input parameters that we need to feed into the API.
+Here we will discuss main API end points that we used in PlantGenIE. There are some important input parameters that we need to feed into the API. 
 
 #### User ID:
 
