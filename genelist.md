@@ -52,6 +52,9 @@ Empty array
 {% endapi-method %}
 ***********
 
+http://api.plantgenie.org/genelist/get_all?name=testing_only&fingerprint=1072439978&table=genelist_potra
+
+
 {% api-method method="get" host="https://api.plantgenie.org" path="/db" %}
 {% api-method-summary %}
 Get all databases
