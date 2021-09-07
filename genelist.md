@@ -14,14 +14,16 @@ This endpoint allows you to get all PlantGenIE GeneList.
 {% api-method-query-parameters %}
 
 {% api-method-parameter name="name" type="string" required=true %}
-database name to represent databases
+GeneList database name
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="table" type="string" required=true %}
-database name to represent databases
+species database name
 {% endapi-method-parameter %}
 
-
+{% api-method-parameter name="fingerprint" type="string" required=true %}
+Unique user ID
+{% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %} 
 
