@@ -23,7 +23,7 @@ database name to represent databases
 
 
 {% endapi-method-query-parameters %}
-{% endapi-method-request %}
+{% endapi-method-request %} 
 
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
