@@ -11,7 +11,7 @@ This endpoint allows you to get all PlantGenIE databases.
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
+{% api-method-query-parameters %}
 
 {% api-method-parameter name="name" type="string" required=true %}
 database name to represent databases
@@ -22,7 +22,7 @@ database name to represent databases
 {% endapi-method-parameter %}
 
 
-{% endapi-method-path-parameters %}
+{% endapi-method-query-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
