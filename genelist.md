@@ -51,7 +51,7 @@ Empty array
 {% endapi-method-spec %}
 {% endapi-method %}
 ***********
-<pre>http://api.plantgenie.org/genelist/get_all?name=testing_only&fingerprint=1072439978&table=genelist_potra</pre>
+<pre>curl --location --request GET 'http://api.plantgenie.org/genelist/get_all?name=testing_only&fingerprint=1072439978&table=genelist_potra'</pre>
 
 {% api-method method="get" host="https://api.plantgenie.org" path="/db" %}
 {% api-method-summary %}
