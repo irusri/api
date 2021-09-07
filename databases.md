@@ -44,6 +44,9 @@ Empty array
 {% endapi-method-spec %}
 {% endapi-method %}
 
+******
+
+
 {% api-method method="get" host="https://api.plantgenie.org" path="/db/name" %}
 {% api-method-summary %}
 Get one database/species/abbreviation

@@ -5,7 +5,7 @@ get
 {% endapi-method-summary %}
 
 {% api-method-description %}
-
+get all genelists
 {% endapi-method-description %}
 
 {% api-method-spec %}
