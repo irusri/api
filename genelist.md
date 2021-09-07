@@ -1,8 +1,8 @@
 # GeneList
 ***********
-{% api-method method="get" host="https://api.plantgenie.org" path="/db" %}
+{% api-method method="get" host="https://api.plantgenie.org/genelist" path="/get_all" %}
 {% api-method-summary %}
-Get all databases
+Get all databases 
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -12,9 +12,11 @@ This endpoint allows you to get all PlantGenIE databases.
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="db" type="string" required=true %}
+
+{% api-method-parameter name="name" type="string" required=true %}
 db to represent databases
 {% endapi-method-parameter %}
+
 {% endapi-method-path-parameters %}
 {% endapi-method-request %}
 
