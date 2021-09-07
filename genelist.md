@@ -6,7 +6,7 @@ Get all genelists
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to get all PlantGenIE databases.
+This endpoint allows you to get all PlantGenIE GeneList.
 {% endapi-method-description %}
 
 {% api-method-spec %}
