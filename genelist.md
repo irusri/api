@@ -1,5 +1,4 @@
 # GeneList
-
 {% api-method method="get" host="http://api.plantgenie.org/genelist/get\_all?name=testing\_only&fingerprint=1072439978&table=genelist\_potra" path="" %}
 {% api-method-summary %}
 get
@@ -17,7 +16,7 @@ get
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 {% endapi-method-request %}
-
+ 
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
