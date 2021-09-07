@@ -1,5 +1,5 @@
 # Databases
-
+***********
 {% api-method method="get" host="https://api.plantgenie.org" path="/db" %}
 {% api-method-summary %}
 Get all databases
@@ -41,8 +41,7 @@ Empty array
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
-****** SUdu gona *****
+***********
 
 
 {% api-method method="get" host="https://api.plantgenie.org" path="/db/name" %}
