@@ -1,14 +1,12 @@
 # Databases
 
-
-
 {% api-method method="get" host="https://api.plantgenie.org" path="/db" %}
 {% api-method-summary %}
 Get all databases
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to get all PlantGenIE databases .
+This endpoint allows you to get all PlantGenIE databases.
 {% endapi-method-description %}
 
 {% api-method-spec %}
